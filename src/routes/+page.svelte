@@ -1,6 +1,5 @@
 <script>
 	let links = [
-		{ title: 'Twitter', url: 'https://twitter.com/_andreyilin' },
 		{ title: 'GitHub', url: 'https://github.com/ilin-andrey' },
 		{ title: 'LinkedIn', url: 'https://www.linkedin.com/in/andrey-ilin/' }
 	];
