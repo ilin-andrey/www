@@ -1,22 +1,17 @@
 <script>
+	import ThemeToggler from '$lib/components/ThemeSwitch.svelte';
+	import { LINKS } from '$lib/consts';
 	import './styles.css';
-
-	let links = [
-		{ title: 'GitHub', url: 'https://github.com/ilin-andrey' },
-		{ title: 'LinkedIn', url: 'https://www.linkedin.com/in/andrey-ilin/' }
-	];
 </script>
 
 <svelte:head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width" />
 	<title>Andrey Ilin</title>
-	<meta name="description" content="Personal website" />
 </svelte:head>
 
 <div class="app">
 	<header>
 		<h2>Hey! I'm Andrey.</h2>
+		<ThemeToggler />
 	</header>
 
 	<main>
@@ -25,7 +20,7 @@
 
 	<footer>
 		<ul>
-			{#each links as link}
+			{#each LINKS as link}
 				<li>
 					<a href={link.url} target="_blank">{link.title}</a>
 				</li>
@@ -35,22 +30,10 @@
 </div>
 
 <style>
-	header {
-		display: flex;
-		justify-content: space-between;
-		align-content: center;
-		gap: 1rem;
-		margin: 0 0 3rem 0;
-	}
-
-	main {
-		box-sizing: border-box;
-	}
-
-	footer {
-		max-width: 64rem;
-		padding: 0;
-		margin: 3rem 0;
+	.app {
+		max-width: 56rem;
+		margin: 0 auto;
+		padding: 3rem 2rem 0;
 	}
 
 	ul {
@@ -84,11 +67,5 @@
 		li::after {
 			content: '';
 		}
-	}
-
-	.app {
-		max-width: 56rem;
-		margin: 0 auto;
-		padding: 3rem 2rem 0;
 	}
 </style>
