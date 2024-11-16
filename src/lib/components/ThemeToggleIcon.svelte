@@ -53,7 +53,8 @@
 		}
 
 		svg .sun-beams {
-			transition: transform var(--transition-duration-long) var(--ease-elastic-4),
+			transition:
+				transform var(--transition-duration-long) var(--ease-elastic-4),
 				opacity var(--transition-duration-long) var(--ease-3);
 		}
 

@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { enhance, type SubmitFunction } from '$app/forms';
+	import { enhance } from '$app/forms';
 	import { page } from '$app/stores';
+	import { type SubmitFunction } from '@sveltejs/kit';
 	import { onMount } from 'svelte';
 	import { isSystemTheme, isTheme, userPrefersDarkTheme } from '../themes';
 	import type { Theme } from '../types';

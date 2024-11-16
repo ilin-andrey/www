@@ -7,16 +7,16 @@ Personal website.
 Install dependencies:
 
 ```bash
-npm install
+pnpm install
 ```
 
 Start a development server:
 
 ```bash
-npm run dev
+pnpm dev
 
 # or start the server and open the app in a new browser tab
-npm run dev -- --open
+pnpm dev -- --open
 ```
 
 ### Building
@@ -24,11 +24,11 @@ npm run dev -- --open
 To create a production version of the app:
 
 ```bash
-npm run build
+pnpm build
 ```
 
 To preview the production build:
 
 ```bash
-npm run preview
+pnpm preview
 ```
