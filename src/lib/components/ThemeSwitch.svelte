@@ -33,8 +33,6 @@
 			}
 		}
 	});
-
-	$: url = $page.url.pathname;
 </script>
 
 <form method="POST" use:enhance={submitUpdateTheme}>
@@ -42,7 +40,8 @@
 		class="toggle"
 		aria-label="Toggle themes"
 		aria-live="polite"
-		formaction="/?/setTheme&theme={currentTheme === 'dark' ? 'light' : 'dark'}&redirectTo={url}"
+		formaction="/?/setTheme&theme={currentTheme === 'dark' ? 'light' : 'dark'}&redirectTo={$page.url
+			.pathname}"
 	>
 		<ThemeToggleIcon />
 	</button>

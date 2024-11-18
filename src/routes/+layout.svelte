@@ -2,6 +2,8 @@
 	import ThemeToggler from '$lib/components/ThemeSwitch.svelte';
 	import { LINKS } from '$lib/consts';
 	import './styles.css';
+
+	const { children } = $props();
 </script>
 
 <svelte:head>
@@ -15,7 +17,7 @@
 	</header>
 
 	<main>
-		<slot />
+		{@render children()}
 	</main>
 
 	<footer>

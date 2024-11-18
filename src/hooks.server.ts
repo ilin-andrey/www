@@ -1,8 +1,7 @@
 import { COOKIE_THEME_KEY } from '$lib/consts';
-import type { Handle } from '@sveltejs/kit';
 import type { Theme } from './lib/types';
 
-export const handle = (async ({ event, resolve }) => {
+export async function handle({ event, resolve }) {
 	let theme: Theme = 'system';
 
 	const newTheme = event.url.searchParams.get('theme') as Theme;
@@ -21,4 +20,4 @@ export const handle = (async ({ event, resolve }) => {
 	}
 
 	return await resolve(event);
-}) satisfies Handle;
+}
